@@ -25,6 +25,63 @@ a {
     font-family: 'Lora';
 }
 
+/*Estilo para el carrito*/
+.dropdown-menu {
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: var(--blanco-calido);
+    border: 1px solid var(--vainilla-cremosa);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header {
+    font-family: 'Lobster Two';
+    color: var(--chocolate-oscuro);
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    font-family: 'Quicksand';
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items button {
+    background-color: var(--naranja-suave);
+    border: none;
+    color: var(--blanco-calido);
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#cart-items button:hover {
+    background-color: var(--btn-hover);
+}
+
+#clear-cart {
+    margin-top: 10px;
+    background-color: var(--chocolate-oscuro);
+    color: var(--blanco-calido);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-cart:hover {
+    background-color: var(--btn-hover);
+}
 
 /*Estilo del título de catálogo y formulario*/
 .text-center {
@@ -102,86 +159,3 @@ footer {
 }
 
 
-/* Estilos para el carrito */
-.cart-display {
-    position: relative;
-    display: inline-block;
-}
-
-#cart-toggle {
-    background-color: transparent;
-    border: none;
-    color: var(--blanco-calido);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-#cart-toggle:hover {
-    color: var(--caramelo-dorado);
-}
-
-#cart-count {
-    font-size: 0.75rem;
-}
-
-.cart-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--blanco-calido);
-    border: 1px solid var(--vainilla-cremosa);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 250px;
-    z-index: 1000;
-}
-
-.cart-dropdown h5 {
-    font-family: 'Lobster Two';
-    color: var(--chocolate-oscuro);
-    margin-bottom: 10px;
-}
-
-#cart-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#cart-items li {
-    font-family: 'Quicksand';
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#cart-items button {
-    background-color: var(--naranja-suave);
-    border: none;
-    color: var(--blanco-calido);
-    padding: 3px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-#cart-items button:hover {
-    background-color: var(--btn-hover);
-}
-
-#clear-cart {
-    margin-top: 10px;
-    background-color: var(--chocolate-oscuro);
-    color: var(--blanco-calido);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#clear-cart:hover {
-    background-color: var(--btn-hover);
-}

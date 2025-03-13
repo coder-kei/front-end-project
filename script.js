@@ -51,6 +51,14 @@ document.getElementById('cart-toggle').addEventListener('click', () => {
     cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
+document.addEventListener('click', (event) => {
+    const cartDropdown = document.getElementById('cart-dropdown');
+    const cartToggle = document.getElementById('cart-toggle');
+    if (!cartToggle.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.style.display = 'none';
+    }
+});
+
 // Cargar el carrito al iniciar la página
 updateCartDisplay();
 

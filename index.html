@@ -36,24 +36,30 @@
                             <a class="nav-link text-white" href="#contacto">Contacto</a>
                         </li>
                     </ul>
-                    <!-- Carrito de compras -->
-                    <div class="cart-display ms-3">
-                        <button class="btn btn-cart position-relative" id="cart-toggle">
+                    <!-- Carrito de compras con Bootstrap Dropdown -->
+                    <div class="dropdown ms-3">
+                        <button class="btn btn-cart dropdown-toggle position-relative" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             🛒
                             <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
                         </button>
-                        <div class="cart-dropdown" id="cart-dropdown">
-                            <h5>Carrito de Compras</h5>
-                            <ul id="cart-items" class="list-unstyled"></ul>
-                            <button id="clear-cart" class="btn btn-form w-100">Vaciar Carrito</button>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown" id="cart-dropdown">
+                            <li><h5 class="dropdown-header">Carrito de Compras</h5></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <ul id="cart-items" class="list-unstyled px-3"></ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <button id="clear-cart" class="btn btn-form w-100">Vaciar Carrito</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section id="carouselExample" class="my-3">
+    <section id="carouselExample" class="my-5">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
