@@ -17,103 +17,172 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="bg-pastel-pink text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Pastelería Dulce Tentación</h1>
-            <p class="lead">Los pasteles más deliciosos hechos con amor.</p>
-        </div>
-    </header>
-
-    <section class="my-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Img\3leches.jpg" class="d-block w-100" alt="Pastel 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="Img/pie-limon.jpg" class="d-block w-100" alt="Pastel 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="Img/pastel-oreo.jpg" class="d-block w-100" alt="Pastel 3">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-white logo" href="#">Dulce Tentación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#carouselExample">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#nuestros-pasteles">Pasteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                    <!-- Carrito de compras -->
+                    <div class="cart-display ms-3">
+                        <button class="btn btn-cart position-relative" id="cart-toggle">
+                            🛒
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
+                        </button>
+                        <div class="cart-dropdown" id="cart-dropdown">
+                            <h5>Carrito de Compras</h5>
+                            <ul id="cart-items" class="list-unstyled"></ul>
+                            <button id="clear-cart" class="btn btn-form w-100">Vaciar Carrito</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        </nav>
+    </header>
+
+    <section id="carouselExample" class="my-3">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Img/3leches.jpg" class="d-block w-100" alt="Pastel de 3 Leches">
+                </div>
+                <div class="carousel-item">
+                    <img src="Img/pie-limon.jpg" class="d-block w-100" alt="Pie de Limón">
+                </div>
+                <div class="carousel-item">
+                    <img src="Img/pastel-oreo.jpg" class="d-block w-100" alt="Pastel de Oreo">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
     </section>
 
-    <section class="container my-5">
+    <section id="nuestros-pasteles" class="container">
         <h2 class="text-center mb-4">Nuestros Pasteles</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="Img\pastel-chocolate.jpg" class="card-img-top" alt="Pastel de Chocolate">
+                    <img src="Img/pastel-chocolate.jpg" class="card-img-top" alt="Pastel de Chocolate">
                     <div class="card-body">
                         <h3 class="card-title">Pastel de Chocolate</h3>
-                        <p class="card-text">Delicioso pastel de chocolate con glaceado de chocolate.</p>
-                        <button class="btn btn-pastel-blue add-to-cart">Añadir al carrito</button>
+                        <p class="card-text">Delicioso pastel con glaceado.</p>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="Img\pastel-fresa.jpg" class="card-img-top" alt="Pastel de Fresa">
+                    <img src="Img/pastel-fresa.jpg" class="card-img-top" alt="Pastel de Fresa">
                     <div class="card-body">
                         <h3 class="card-title">Pastel de Fresa</h3>
                         <p class="card-text">Pastel de fresa con crema batida.</p>
-                        <button class="btn btn-pastel-blue add-to-cart">Añadir al carrito</button>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="Img\pastel-vainilla.jpg" class="card-img-top" alt="Pastel de Vainilla">
+                    <img src="Img/pastel-vainilla.jpg" class="card-img-top" alt="Pastel de Vainilla">
                     <div class="card-body">
                         <h3 class="card-title">Pastel de Vainilla</h3>
                         <p class="card-text">Clásico pastel de vainilla con frosting.</p>
-                        <button class="btn btn-pastel-blue add-to-cart">Añadir al carrito</button>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Img/pastel-naranja.jpg" class="card-img-top" alt="Pastel de Naranja">
+                    <div class="card-body">
+                        <h3 class="card-title">Pastel de Naranja</h3>
+                        <p class="card-text">Delicioso pastel, esponjoso y  con el toque perfecto de frescura y aroma cítrico.</p>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Img/cheesecake-maracuya.jpg" class="card-img-top" alt="Cheesecake de Maracuyá">
+                    <div class="card-body">
+                        <h3 class="card-title">Cheesecake de Maracuyá</h3>
+                        <p class="card-text">Dulce, ácido y lleno de frescura tropical.</p>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Img/mousse-limon.jpg" class="card-img-top" alt="Mousse de Limón">
+                    <div class="card-body">
+                        <h3 class="card-title">Mousse de Limón</h3>
+                        <p class="card-text">Refrescante, cremoso y con el equilibrio perfecto entre dulce y ácido.</p>
+                        <button class="btn btn-cart add-to-cart">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-pastel-blue text-white py-5">
+    <section id="contacto" class="bg-contact text-white py-3">
         <div class="container">
-            <h2 class="text-center mb-4">Contáctanos</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" required>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Contáctanos</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-form">Enviar</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" required>
+    
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <p class="lead fs-4">"Los pasteles más deliciosos hechos con amor. 😋"</p>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-pastel-pink">Enviar</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-pastel-pink text-white text-center py-1">
+    <footer class="text-white text-center py-1">
         <div class="container">
-            <p>&copy; 2025 Pastelería Dulce Tentación. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Pastelería Dulce Tentación - Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
-    <!--DESARROLLADO POR EL SYDA LOVERS-->
 </body>
 </html>

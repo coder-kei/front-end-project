@@ -7,58 +7,56 @@
     --btn-hover: #A66245;
     --fondo: #F3E2C7;
 }
-/*Fondo del sitio*/
-body{
+/* Fondo del sitio */
+body {
     background-color: var(--fondo);
 }
 
-/*Fondo del header*/
-header {
+/*Estilo de la barra de navegación*/
+nav {
     background-color: var(--chocolate-oscuro);
-    color: var(--blanco-calido);
 }
-
-/*Estilo del título y descripcion*/
-h1{
+/*Estilo del logo e items del nav*/
+.logo {
     font-family: 'Pacifico';
+    font-size: 25px;
 }
-.p{
+a {
     font-family: 'Lora';
 }
 
-/*Estilo del titulo de catalogo y form*/
+
+/*Estilo del título de catálogo y formulario*/
 .text-center {
     font-family: 'Playfair Display';
 }
-
-.card-title{
+/*Estilo de títulos de pasteles*/
+.card-title {
     font-family: 'Lobster Two';
 }
-.card-text{
+/*Estilo de descrpcion de pasteles*/
+.card-text {
     font-family: 'Quicksand';
 }
-
 /*Botones principales*/
-.btn-pastel-blue {
+.btn-cart {
     background-color: var(--caramelo-dorado);
     border: none;
     color: var(--chocolate-oscuro);
     font-family: 'Poppins';
 }
-
-.btn-pastel-blue:hover {
+.btn-cart:hover {
     background-color: var(--naranja-suave);
     color: var(--blanco-calido);
 }
 
 /*Fondo de la sección de contacto*/
-.bg-pastel-blue {
+.bg-contact {
     background-color: var(--naranja-suave);
     color: var(--chocolate-oscuro);
 }
-
 /*Estilo para el formulario*/
-.form-label{
+.form-label {
     font-family: 'Nunito';
 }
 form input,
@@ -67,41 +65,123 @@ form textarea {
     border: 1px solid var(--vainilla-cremosa);
     color: var(--chocolate-oscuro);
 }
-
 form input:focus,
 form textarea:focus {
     border-color: var(--caramelo-dorado);
     box-shadow: 0 0 5px var(--caramelo-dorado);
 }
-
 /*Botón de enviar en el formulario*/
-.btn-pastel-pink {
+.btn-form {
     background-color: var(--chocolate-oscuro);
     border: none;
     color: var(--blanco-calido);
     font-family: 'Poppins';
 }
-
-.btn-pastel-pink:hover {
+.btn-form:hover {
     background-color: var(--btn-hover);
     color: var(--blanco-calido);
 }
-
+p{
+    font-family: "Lora";
+}
 /*Fondo del footer*/
 footer {
     background-color: var(--chocolate-oscuro);
     color: var(--blanco-calido);
 }
 
-/*Animaciones y efectos*/
+/*Efectos*/
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--blanco-calido);
     border: 1px solid var(--vainilla-cremosa);
 }
-
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Estilos para el carrito */
+.cart-display {
+    position: relative;
+    display: inline-block;
+}
+
+#cart-toggle {
+    background-color: transparent;
+    border: none;
+    color: var(--blanco-calido);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cart-toggle:hover {
+    color: var(--caramelo-dorado);
+}
+
+#cart-count {
+    font-size: 0.75rem;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--blanco-calido);
+    border: 1px solid var(--vainilla-cremosa);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    z-index: 1000;
+}
+
+.cart-dropdown h5 {
+    font-family: 'Lobster Two';
+    color: var(--chocolate-oscuro);
+    margin-bottom: 10px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    font-family: 'Quicksand';
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items button {
+    background-color: var(--naranja-suave);
+    border: none;
+    color: var(--blanco-calido);
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#cart-items button:hover {
+    background-color: var(--btn-hover);
+}
+
+#clear-cart {
+    margin-top: 10px;
+    background-color: var(--chocolate-oscuro);
+    color: var(--blanco-calido);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-cart:hover {
+    background-color: var(--btn-hover);
+}
